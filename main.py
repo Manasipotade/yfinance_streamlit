@@ -53,13 +53,17 @@ def fetch_stock_data(symbols, interval, period):
 # Streamlit app
 def main():
     st.title('Stock Data Downloader')
+    
+    # Display list of stocks
+    
+    st.write("List of available stock symbols:")
+    st.text_area('Symbols', ', '.join(symbols), height=150)
 
     # Input fields
     interval = st.text_input('Enter Time Interval (e.g., 1m, 2m, 1h, 1d, 1wk, 1mo)', '1d')
     period = st.text_input('Enter Time Period (e.g., 1d, 5d, 1mo, 3mo, 1y)', '1mo')
 
     # Button to fetch data
-    
     
     if st.button('Fetch Data'):
         with st.spinner('Fetching data...'):
