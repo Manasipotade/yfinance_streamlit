@@ -85,7 +85,7 @@ def main():
             stock_data = fetch_stock_data(symbols, interval, period)
             if not stock_data.empty:
                 st.success('Data fetched successfully!')
-                st.dataframe(stock_data)
+                # st.dataframe(stock_data)
                 
                 # Save to Excel in memory
                 timestamp = datetime.datetime.now().strftime('%Y%m%d_%H%M%S')
