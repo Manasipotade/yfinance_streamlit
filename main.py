@@ -36,8 +36,7 @@ nifty50_stocks = ['ADANIENT.NS','ADANIPORTS.NS','APOLLOHOSP.NS','ASIANPAINT.NS',
 'LT.NS','M&M.NS','MARUTI.NS','NTPC.NS','NESTLEIND.NS','ONGC.NS','POWERGRID.NS','RELIANCE.NS','SBILIFE.NS','SHRIRAMFIN.NS',
 'SBIN.NS','SUNPHARMA.NS','TCS.NS','TATACONSUM.NS','TATAMOTORS.NS','TATASTEEL.NS','TECHM.NS','TITAN.NS','ULTRACEMCO.NS','WIPRO.NS']
 
-indices = ['BANKNIFTY.NS','FINNIFTY.NS','MIDCPNIFTY.NS','NIFTY.NS','NIFTYNXT50.NS']  # Nifty 50 and Sensex indices
-
+indices = ['^NSEBANK', 'NIFTY_FIN_SERVICE.NS','^NSEMDCP50','^NSEI','^NSMIDCP']
 
 # Function to fetch stock data
 def fetch_stock_data(symbols, interval, period):
@@ -76,7 +75,7 @@ def main():
     st.text_area('Symbols', ', '.join(symbols), height=150)  
     
     # Input fields
-    interval = st.text_input('Enter Time Interval (e.g., 1m, 2m, 1h, 1d, 1wk, 1mo)', '1d')
+    interval = st.text_input('Enter Time Interval (e.g., 1m, 2m, 5m, 1h, 1d, 1wk, 1mo)', '1d')
     period = st.text_input('Enter Time Period (e.g., 1d, 5d, 1mo, 3mo, 1y)', '1mo')
 
     # Button to fetch data
