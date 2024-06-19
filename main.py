@@ -75,8 +75,8 @@ def main():
     st.text_area('Symbols', ', '.join(symbols), height=150)  
     
     # Input fields
-    interval = st.text_input('Enter Time Interval (e.g., 1m, 2m, 5m, 1h, 1d, 1wk, 1mo)', '1d')
-    period = st.text_input('Enter Time Period (e.g., 1d, 5d, 1mo, 3mo, 1y)', '1mo')
+    interval = st.selectbox('Select a Time Interval', ("1m", "2m", "5m", "15m", "30m", "60m", "90m", "1d", "5d", "1wk", "1mo", "3mo"))
+    period = st.selectbox('Select Time Period',("1d", "5d", "1mo", "3mo", "6mo", "1y", "2y", "5y", "10y", "ytd", "max"))
 
     # Button to fetch data
     
